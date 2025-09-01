@@ -1,0 +1,6 @@
+# requirements.txt
+fastapi
+uvicorn
+requests
+mcp
+ollama   # for LLM interaction

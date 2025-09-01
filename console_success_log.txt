@@ -1,0 +1,21 @@
+uv run ollama_mcp_client.py
+> Tools loaded from MCP: ['ping', 'csv_read', 'csv_add_row', 'csv_insight', 'text_read', 'text_append', 'text_edit']
+→ Tool call argument error: Tool call missing required 'path' argument after normalization.
+→ Calling tool: csv_read with {'path': '/data/report.csv'}
+← Tool result: CallToolResult(content=[TextContent(type='text', text='[{"sales":"100","date":"2024-06-01"},{"sales":"200","date":"2024-06-02"},{"sales":"150","date":"2024-06-03"}]', annotations=None, meta=None)], structured_content=None, data=None, is_error=False)
+
+
+Assistant: **Summary of `report.csv`**
+
+| Statistic | Value |
+|-----------|-------|
+| **Rows** | 3 |
+| **Columns** | 2 (sales, date) |
+| **Sales** | 100, 200, 150 |
+| **Total sales** | 450 |
+| **Average sales** | 150 |
+| **Maximum sales** | 200 |
+| **Minimum sales** | 100 |
+| **Missing values** | None |
+
+The file contains three daily sales records with no missing data. 
